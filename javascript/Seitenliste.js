@@ -1,7 +1,15 @@
-
 function toggleSidebar() {
   var Seitenliste = document.getElementById('Seitenliste');
   Seitenliste.classList.toggle('hidden');
+}
+
+function autoShiftNav() {
+  var navBar = document.getElementById("Seitenliste");
+  if (window.innerWidth <= 768) { 
+    navBar.style.left = "-120px";
+  } else {
+    navBar.style.left = "0px";
+  }
 }
 
 // funktion um seitenliste nach links und wieder zurück zu verschieben
@@ -14,9 +22,10 @@ function toggleNav() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function() { // holt den Namen der aktuellen Seite
+  autoShiftNav(); 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var currentPage = window.location.pathname.split("/").pop(); // holt den Namen der aktuellen Seite
+  var currentPage = window.location.pathname.split("/").pop();
   var links = document.querySelectorAll(".links a");
 
   links.forEach(function(link) {
@@ -26,3 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+window.addEventListener("resize", autoShiftNav);
+
