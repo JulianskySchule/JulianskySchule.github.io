@@ -175,6 +175,45 @@ main {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .kopfbereich h1 {
+    font-size: 1.5em;
+  }
+
+  .simulations-iframe {
+    height: 250px;
+  }
+
+  .breadboard-bereich h2 {
+    font-size: 1.2em;
+  }
+
+  .schaltungsbild {
+    max-width: 90%;
+    max-height: 500px;
+  }
+
+  .simulationsbereich,
+  .breadboard-bereich {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kopfbereich h1 {
+    font-size: 1.2em;
+  }
+
+  .simulations-iframe {
+    height: 200px;
+  }
+
+  .schaltungsbild {
+    max-width: 90%;
+    max-height: 400px;
+  }
+
+}
 
 body.dark-mode {
   color: black;
