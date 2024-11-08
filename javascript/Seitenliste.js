@@ -23,7 +23,7 @@ function toggleNav() {
 }
 
 document.addEventListener("DOMContentLoaded", function() { // holt den Namen der aktuellen Seite
-  autoShiftNav(); 
+  autoShiftNav();  //funktioniere bitte
 
   var currentPage = window.location.pathname.split("/").pop();
   var links = document.querySelectorAll(".links a");
