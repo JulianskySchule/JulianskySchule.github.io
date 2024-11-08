@@ -9,12 +9,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
   
   .kopfbereich {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5 ease;
   }
   
   .kopfbereich h1 {
@@ -34,6 +36,7 @@ body {
     padding: 10px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 8px;
+    transition: background 0.5 ease;
   }
   
   h2 {
@@ -77,6 +80,7 @@ body {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5 ease;
   }
   
   .fussbereich p {
@@ -159,4 +163,62 @@ body {
   
   .hidden {
     display: none;
+  }
+
+
+  body.dark-mode {
+    color: black;
+    background: linear-gradient(to bottom, white, transparent 20%, transparent 80%, white),
+    url('../bilder/light mode hintergrund.jpeg') center center / cover no-repeat;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+  }
+  
+ 
+  body.dark-mode .info-section,
+  body.dark-mode .sensoren,
+  body.dark-mode .programmierung,
+  body.dark-mode .bilder {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  body.dark-mode .kopfbereich,
+  body.dark-mode .fussbereich{
+    background-color: white;
+    color: black;
+  }
+  
+  
+  
+  body.dark-mode .knopf:hover {
+    background-color: white;
+    color: black;
+    outline: 2px solid black;
+    box-shadow: 0 0 10px black;
+  }
+  
+  body.dark-mode #toggle-btn:hover {
+    background-color: white;
+    color: black;
+    outline: 2px solid black;
+    box-shadow: 0 0 10px black;
+  }
+  
+  body.dark-mode #toggle-btn:hover::before {
+    background-color: #000000;
+  }
+  
+  body.dark-mode .links a {
+    text-shadow: none;
+  }
+  
+  .darkmode-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .darkmode-toggle:active {
+    transform: scale(1.2);
   }
