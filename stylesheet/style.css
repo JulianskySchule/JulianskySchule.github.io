@@ -1,0 +1,290 @@
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(to bottom, black, transparent 20%, transparent 80%, black), 
+              url('../bilder/Hintergrund für Schaltungen.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.kopfbereich {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5 ease;
+}
+
+
+
+.kopfbereich h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.simulationsbereich {
+  margin: 20px auto;
+}
+
+.simulationsbereich h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.simulations-iframe {
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.breadboard-bereich {
+  margin: 20px auto;
+}
+
+.breadboard-bereich h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.schaltungsbild {
+  width: 100%;
+  max-width: 700px;
+  max-height: 800px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.knopf {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.knopf:hover {
+  background-color: black;
+  color: white;
+  outline: 2px solid white;
+  box-shadow: 0 0 10px white;
+  transform: scale(1.1);
+}
+
+.fussbereich {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5 ease;
+}
+
+.fussbereich p {
+  margin: 0;
+}
+
+#Seitenliste {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 120px;
+  height: 60%;
+  border-radius: 8px;
+  background-color: #333;
+  transition: left 0.5s ease, background-color 0.5s ease;
+  transform: translateY(-50%);
+}
+
+#toggle-btn {
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  width: 30px;
+  height: 30px;
+  background-color: #666;
+  border-radius: 15px;
+  transform: translate(-50%, -30%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#toggle-btn:hover {
+  background-color: black;
+  color: white;
+  outline: 2px solid white;
+  box-shadow: 0 0 10px white;
+}
+
+#toggle-btn::before {
+  content: "";
+  width: 18px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px 0;
+  transition: color 0.4s ease;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ff6347;
+}
+
+.links a.active::after {
+  content: '🢀 (JETZT)';
+  color: white;
+  animation: bounce 1s infinite alternate;
+}
+
+.links a.active {
+  font-weight: 800;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .kopfbereich h1 {
+    font-size: 1.5em;
+  }
+
+  .simulations-iframe {
+    height: 250px;
+  }
+
+  .breadboard-bereich h2 {
+    font-size: 1.2em;
+  }
+
+  .schaltungsbild {
+    max-width: 90%;
+    max-height: 500px;
+  }
+
+  .simulationsbereich,
+  .breadboard-bereich {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kopfbereich h1 {
+    font-size: 1.2em;
+  }
+
+  .simulations-iframe {
+    height: 200px;
+  }
+
+  .schaltungsbild {
+    max-width: 90%;
+    max-height: 400px;
+  }
+
+}
+
+body.dark-mode {
+  color: black;
+  background: linear-gradient(to bottom, white, transparent 20%, transparent 80%, white),
+  url('../bilder/light mode hintergrund.jpeg') center center / cover no-repeat;
+  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+}
+
+
+
+body.dark-mode .kopfbereich,
+body.dark-mode .fussbereich{
+  background-color: white;
+  color: black;
+}
+
+
+
+body.dark-mode .knopf:hover {
+  background-color: white;
+  color: black;
+  outline: 2px solid black;
+  box-shadow: 0 0 10px black;
+}
+
+body.dark-mode #toggle-btn:hover {
+  background-color: white;
+  color: black;
+  outline: 2px solid black;
+  box-shadow: 0 0 10px black;
+}
+
+body.dark-mode #toggle-btn:hover::before {
+  background-color: #000000;
+}
+
+body.dark-mode .links a {
+  text-shadow: none;
+}
+
+.darkmode-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.darkmode-toggle:active {
+  transform: scale(1.2);
+}
+
+
+.video-container {
+  margin: 20px auto;
+}
+
+video {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  width: 100%;
+  max-width: 700px;
+  max-height: 800px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.video-container h2{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+

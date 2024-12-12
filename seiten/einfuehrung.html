@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einführung</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheet/raspberry.css">
+  <script src="../javascript/Seitenliste.js"></script>
+  <script src="../javascript/darkmodeToggle.js"></script>
+</head>
+
+<body>
+  <header class="kopfbereich">
+    <h1>BBS W-BFTA-23</h1>
+    <button id="darkmode-toggle" class="darkmode-toggle" onclick="toggleDarkMode()">
+      🌞
+    </button>
+  </header>
+
+
+  <main>
+    <div class="sensoren">
+      <h2>Zu Beginn</h2>
+      <ul>
+        <li>Hier findest du Grundlegende Informationen, die zum bauen einer Breadboard-Schaltung zu beachten sind.</li>
+
+      </ul>
+    </div>
+
+    <div class="programmierung">
+      <h2>Legende</h2>
+      <img src="../bilder/Legende2.png" alt="Jürgen war das, nicht ich." class="bild">
+    </div>
+
+    <div class="programmierung">
+      <h2>Die LED</h2>
+      <img src="../bilder/LED.png" alt="Jürgen war das, nicht ich." class="bild">
+      <li>Bei der LED ist es wichtig zu beachten,...</li>
+      <li>...dass man sie richtig rum einbaut.</li>
+      <li>...dass der richtige Vorwiderstand gewählt wurde.</li>
+    </div>
+
+    
+      <h2>Das Breadboard</h2>
+      <img src="../bilder/Brotbrett.jpg" alt="Jürgen war das, nicht ich." class="bild">
+      <li>Bei dem Breadboard ist es wichtig zu beachten,...</li>
+      <li>...wie die einzelnen Löcher mit einander Verbunden sind.</li>
+    </div>
+
+
+
+    <button onclick="history.back()" class="knopf">Zurück</button>
+    <button onclick="location.href = '../index.html';" class="knopf">Startseite</button>
+  </main>
+
+  <footer class="fussbereich">
+    <hr>
+    <p>Erstellt von Max Hoang und Marc Herrmann. Alle Rechte dieser Seite liegen bei uns.</p>
+  </footer>
+
+  <div id="Seitenliste">
+    <div id="toggle-btn" onclick="toggleNav()"></div>
+    <div class="links">
+        <a href="../seiten/einfuehrung.html">Einführung</a><br>
+        <a href="../seiten/ledpara.html">LED-Parallel-schaltung</a><br>
+        <a href="../seiten/ledreihe.html">LED Reihen-schaltung</a><br>
+        <a href="../seiten/raspberry.html">Raspberry Pi Auto</a><br>
+    </div>
+  </div>
+
+</body>
+</html>

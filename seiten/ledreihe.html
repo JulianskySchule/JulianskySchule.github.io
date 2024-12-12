@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBS-Alfeld|W-BFTA-23|Technischer-Assisten-für-Informatik|Gruppe:Elektrotechnik|Marc Herrmann,Max-Hoang|</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheet/style.css">
+  <script src="../javascript/Seitenliste.js"></script>
+  <script src="../javascript/darkmodeToggle.js"></script>
+</head>
+
+<body>
+  <header class="kopfbereich">
+    <h1>W-BFTA-23</h1>
+    <button id="darkmode-toggle" class="darkmode-toggle" onclick="toggleDarkMode()">
+      🌞
+    </button>
+  </header>
+
+  <main>
+    <div class="simulationsbereich">
+      <h2>LED-Reihenschaltung</h2>
+      <p><strong>Simulation der Schaltung</strong></p>
+      <iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADdxCqxiVPuwfKlQAstKBJgIWAJxAoEhEHirZsSlRLDwWAZ3C9lVBRuHgQAMwCGAG110WYQnzWmQIp0fkgAJnWsArjYALgw2dD7mZjCQrADu-OCCiZqQLAlOVJo8fKnp7p6aHko5UPnFBnyZlWVAA"
+              name="schaltung-simulation" 
+              class="simulations-iframe" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="breadboard-bereich">
+      <h2>Schaltungsaufbau auf einem Breadboard</h2>
+      <img src="../bilder/Reihenschaltung.png" alt="Ladungsfehler" class="schaltungsbild">
+      </div>
+
+
+      <div class="video-container">
+        <h2>Video zur Schaltung</h2>
+        <video controls>
+          <source src="../video/reihen.mp4" type="video/mp4">
+          Dein Browser unterstüzt den Video Tag nicht.
+        </video>
+  
+        <button onclick="history.back()" class="knopf">Zurück</button>
+        <button onclick="location.href = '../index.html';" class="knopf">Startseite</button>
+      </div>
+
+  </main>
+
+  <footer class="fussbereich">
+    <hr>
+    <p>Erstellt von Max Hoang und Marc Herrmann. Alle Rechte dieser Seite liegen bei uns.</p>
+  </footer>
+
+  <div id="Seitenliste">
+    <div id="toggle-btn" onclick="toggleNav()"></div>
+    <div class="links">
+        <a href="../seiten/einfuehrung.html">Einführung</a><br>
+        <a href="../seiten/ledpara.html">LED-Parallel-schaltung</a><br>
+        <a href="../seiten/ledreihe.html">LED Reihen-schaltung</a><br>
+        <a href="../seiten/raspberry.html">Raspberry Pi Auto</a><br>
+    </div>
+  </div>
+
+</body>
+</html>
